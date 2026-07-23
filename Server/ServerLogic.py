@@ -37,11 +37,11 @@ class ServerLogic:
             {"server_socket": self.server_socket}
         )
         print("ServerListenCoroutine", res)
-        # res = self.manager.create_coroutine(
-        #     ClientHandleCoroutine,
-        #     {}
-        # )
-        # print("ClientHandleCoroutine", res)
+        res = self.manager.create_coroutine(
+            ClientHandleCoroutine,
+            {}
+        )
+        print("ClientHandleCoroutine", res)
 
         print(f"Сервер запущен на {self.host}:{self.port}")
         print("Ожидание подключений...")
